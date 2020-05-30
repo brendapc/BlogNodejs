@@ -9,10 +9,12 @@
 </div>
  <hr>
 {{#each postagens}}
- <div class="card">
+ <div class="card mt-4">
      <div class="card-body">
-         <h3>{{titulo}}</h3>
-         <p>{{descricao}}</p>
+        <hr>
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <small>Categoria: {{categoria.nome}}</small> <a href="/postagem/{{slug}}"><button class="btn btn-link">Leia mais</button></a>
      </div>
  </div>
  {{else}}

@@ -58,6 +58,21 @@ const Postagem = mongoose.model('postagens')
     app.get('/404', (req,res)=>{
         res.send('error404')
     })
+    
+    app.get('/postagem/:slug', (req,res)=>{
+        Postagem.findOne({slug: req.params.slug}).lean().then((postagem)=>{
+            if(postagem){
+                res.render("postagem/index", {postagem: postagem})
+            }else{
+                req.flash('error_msg','esta postagem não existe')
+                res.redirect('/')
+            }
+        }).catch((err)=>{
+            req.flash('error_msg','houve um erro interno')
+            res.redirect('/')
+        })
+    })
+
 
     app.get('/posts',(req,res)=>{
 
