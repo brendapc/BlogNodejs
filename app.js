@@ -9,6 +9,8 @@ const session = require('express-session')
 const flash = require('connect-flash')
 require("./models/Postagem")
 const Postagem = mongoose.model('postagens')
+require('./models/Categoria')
+const Categoria = mongoose.model('categorias')
 //config
     //session
     app.use(session({
@@ -73,6 +75,33 @@ const Postagem = mongoose.model('postagens')
         })
     })
 
+    app.get('/categorias', (req,res)=>{
+        Categoria.find().lean().then((categorias)=>{
+            res.render('categoria/index', {categorias:categorias})
+        }).catch((err)=>{
+            res.flash('error_msg', 'houve um erro ao listar categorias')
+            res.redirect('/')
+        })
+    })
+
+    app.get('/categorias/:slug', (req,res)=>{
+        Categoria.findOne({slug: req.params.slug}).lean().then((categoria)=>{
+            if(categoria){
+                Postagem.find({categoria: categoria._id}).lean().then((postagens)=>{
+                    res.render('categoria/postagens', {postagens: postagens, categoria: categoria})
+                }).catch((err)=>{
+                    req.flash('error_msg', 'houve um erro ao listar os posts')
+                    res.redirect('/')
+                })
+            }
+            else{
+                req.flash('error_msg', 'essa categoria não existe')
+            }
+        }).catch((err)=>{
+            req.flash('error_msg', 'houve um erro ao acessar a categoria')
+            res.redirect('/')
+        })
+    })
 
     app.get('/posts',(req,res)=>{
 
