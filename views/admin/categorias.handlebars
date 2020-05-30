@@ -6,8 +6,15 @@
         <div class="card-body">
             Nome:<h4> {{nome}}</h4>
             <small>Slug: {{slug}}</small>
-            <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-info">editar</button></a>
+            <div class="btn-group " role="group" aria-label="Basic example" > 
+                <a href="/admin/categorias/edit/{{_id}}"><button  class="btn btn-link">editar</button></a>
+                <form action="/admin/categorias/deletar" method="post">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button  type="submit" class="btn btn-link ">deletar</button>
+                </form>
+            </div>
         </div>
     </div>
 {{else}}
+    <h4>nenhuma categoria registrada</h4>
 {{/each}}
