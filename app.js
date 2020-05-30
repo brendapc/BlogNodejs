@@ -7,7 +7,8 @@ const path = require('path')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('connect-flash')
-
+require("./models/Postagem")
+const Postagem = mongoose.model('postagens')
 //config
     //session
     app.use(session({
@@ -16,7 +17,7 @@ const flash = require('connect-flash')
         saveUninitialized: true
     }))
     app.use(flash())
-    
+
     //middlewear
     app.use((req,res,next)=>{
         res.locals.success_msg = req.flash("success_msg")
@@ -45,8 +46,22 @@ const flash = require('connect-flash')
 
     app.use('/admin', admin) //(prefixo,referencia a arquivo externo)
 
+    app.get('/', (req,res)=>{
+        Postagem.find().lean().populate('categoria').sort({data: 'desc'}).then((postagens)=>{
+            res.render('index', {postagens: postagens})   
+        }).catch((err)=>{
+            req.flash('error_msg','houve um erro interno')
+            res.redirect('/404')
+        })
+        
+    })
+    app.get('/404', (req,res)=>{
+        res.send('error404')
+    })
 
+    app.get('/posts',(req,res)=>{
 
+    })
 
  const PORT = 8081
  app.listen(PORT, ()=>{
