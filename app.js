@@ -31,6 +31,7 @@ require('./config/auth')(passport)
         res.locals.success_msg = req.flash("success_msg")
         res.locals.error_msg = req.flash('error_msg')
         res.locals.error = req.flash('error')
+        res.locals.user = res.user || null; //req user armazena dados do ususario logado
         next()
     })
 
