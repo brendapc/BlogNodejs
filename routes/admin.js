@@ -3,6 +3,8 @@ const router = express.Router()
 const mongoose = require('mongoose')
 require('../models/Categoria')
 const Categoria = mongoose.model('categorias')
+require('../models/Postagens')
+const Postagem = mongoose.model("postagens")
 
 router.get('/', (req,res)=>{
     res.render('admin/index')
