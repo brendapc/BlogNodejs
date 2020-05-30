@@ -3,7 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose')
 require('../models/Categoria')
 const Categoria = mongoose.model('categorias')
-require('../models/Postagens')
+require('../models/Postagem')
 const Postagem = mongoose.model("postagens")
 
 router.get('/', (req,res)=>{
@@ -113,7 +113,7 @@ router.get('/postagens/add', (req,res)=>{
 router.post('/postagens/new', (req,res)=>{
     var error = []
     if(req.body.categoria == 0){
-        error.push({text: 'categoria invalida'} )
+        error.push({text: 'categoria invalida, registre alguma'} )
     }
     if(error.length>0){
         res.render('admin/addpostagens' ,{error: error})
