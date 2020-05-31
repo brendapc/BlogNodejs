@@ -2,7 +2,7 @@
 
 sistema que permite que apenas administradores criem, deletem, atualizem os dados de uma pagina (blog).
 <hr>
-tecnologias usadas:
+Principais tecnologias usadas:
 <ul>
   <li>NodeJS</li>
     <ul>
