@@ -1,6 +1,6 @@
 # BlogNodeJs
 
-sistema que permite que apenas administradores criem, deletem, atualizem os dados de uma pagina (blog).
+sistema que permite que apenas administradores criem, deletem, atualizem os dados de paginas de postagens e categorias (blog).
 <hr>
 Principais tecnologias usadas:
 <ul>
