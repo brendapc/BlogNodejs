@@ -15,6 +15,7 @@ const usuarios = require('./routes/usuario')
 const passport = require('passport')
 require('./config/auth')(passport)
 
+
 //config
     //session
     app.use(session({
@@ -120,7 +121,7 @@ require('./config/auth')(passport)
 
     })
 
- const PORT = 8081
+ const PORT =  8081
  app.listen(PORT, ()=>{
     console.log('server rodando')
  })

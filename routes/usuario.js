@@ -42,7 +42,7 @@ router.post('/registro', (req,res)=>{
                     nome: req.body.nome,
                     email: req.body.email,
                     senha: req.body.senha,
-                    //eAdmin: 1 para criar um admin
+                    //eAdmin: 1 //para criar um admin
                 })
                 bcrypt.genSalt(10, (erro,salt)=>{
                     bcrypt.hash(novoUsuario.senha, salt,(erro,hash)=>{

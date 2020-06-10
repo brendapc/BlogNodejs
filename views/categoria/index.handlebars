@@ -1,5 +1,9 @@
 <h4>Categorias:</h4>
+
 {{#each categorias}}
     <a href="/categorias/{{slug}}"><h5>{{nome}}</h5></a>
+    
 {{else}}
+<a href="/admin/categorias/add"><button class="btn btn-info">Adicione categorias</button></a>
 {{/each}}
+<a href="/admin/categorias/add"><button class="btn btn-info">Adicione categorias</button></a>
