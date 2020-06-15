@@ -17,4 +17,4 @@ Principais tecnologias usadas:
 </ul>
 
 ##home
-![ScreenShot](https://raw.github.com/brendapc/BlogNodejs/master/screenshots/home.png})
+![image](https://raw.github.com/brendapc/BlogNodejs/master/screenshots/home.png})
