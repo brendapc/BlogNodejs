@@ -16,5 +16,3 @@ Principais tecnologias usadas:
  <li>Bcrypt</li>
 </ul>
 
-##home
-![image](https://raw.github.com/brendapc/BlogNodejs/master/screenshots/home.png})
