@@ -15,3 +15,6 @@ Principais tecnologias usadas:
  <li>Passport</li>
  <li>Bcrypt</li>
 </ul>
+
+##home
+![ScreenShot](https://raw.github.com/brendapc/BlogNodejs/master/screenshots/home.png})
