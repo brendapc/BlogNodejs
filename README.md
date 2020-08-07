@@ -16,4 +16,5 @@ Principais tecnologias usadas:
  <li>Bcrypt</li>
 </ul>
  <h2>Screenshots</h2>
-veja as screenshots na pasta screeshots  
+veja as screenshots na pasta screeshots  https://github.com/brendapc/BlogNodejs/tree/master/screenshots 
+![](screenshots/home.png)
