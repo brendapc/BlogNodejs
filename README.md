@@ -15,5 +15,5 @@ Principais tecnologias usadas:
  <li>Passport</li>
  <li>Bcrypt</li>
 </ul>
- <h2>PrintScreens</h2>
-dont forget to check the <a src"https://github.com/brendapc/BlogNodejs/tree/master/screenshots">screentshots</a> 
+ <h2>Screenshots</h2>
+veja as screenshots na pasta screeshots  
