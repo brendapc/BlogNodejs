@@ -16,5 +16,4 @@ Principais tecnologias usadas:
  <li>Bcrypt</li>
 </ul>
  <h2>PrintScreens</h2>
-Home: 
-![](screenshots/cadastro-categ-sucesso.png)
+dont forget to check the <a src"https://github.com/brendapc/BlogNodejs/tree/master/screenshots">screentshots</a> 
