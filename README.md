@@ -17,4 +17,4 @@ Principais tecnologias usadas:
 </ul>
  <h2>PrintScreens</h2>
 Home: 
-![](https://github.com/brendapc/BlogNodejs/blob/master/screenshots/cadastro-categ-sucesso.png)
+![](screenshots/cadastro-categ-sucesso.png)
