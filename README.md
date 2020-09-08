@@ -7,10 +7,10 @@ Principais tecnologias usadas:
   <li>NodeJS</li>
     <ul>
      <li>Express.js</li>
-     <li>Express-Handlebars para apresentar as postagens
+     <li>Handlebars para apresentar as postagens
      <li>Mongoose</li>  
     </ul>
- <li>MongoDB</li>
+ <li>MongoDB com mongoose
  <li>Bootstrap</li>
  <li>Passport</li>
  <li>Bcrypt</li>
